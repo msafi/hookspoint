@@ -8,7 +8,7 @@
     "start": "run-s _clean _serve",
     "_eleventy": "eleventy",
     "_serve": "eleventy --serve",
-    "_clean": "rimraf _docs"
+    "_clean": "rimraf docs"
   },
   "repository": {
     "type": "git",
