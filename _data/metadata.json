@@ -1,0 +1,10 @@
+{
+  "title": "Hooks Point",
+  "url": "https://hookspoint.com/",
+  "feed": {
+    "path": "/feed/feed.xml"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json"
+  }
+}
