@@ -5,7 +5,7 @@ const formatDate = require("../code/formatDate");
 module.exports = async function (postList, img) {
   return html`
     <ul class="listStyleTypeNone padding0">
-      ${await bluebird.map(postList, async (post) => {
+      ${await bluebird.map(postList.slice().reverse(), async (post) => {
         return html`
           <li>
             <a

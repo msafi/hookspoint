@@ -102,6 +102,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setTemplateFormats(["md", "png", "11ty.js"]);
 
+  eleventyConfig.addShortcode("ref", function () {});
+
   eleventyConfig.addShortcode("img", async function (
     src,
     alt,
