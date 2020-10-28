@@ -25,6 +25,11 @@ exports.render = function (data) {
           href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
         />
         <link rel="stylesheet" href="/css/index.css" />
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
       </head>
 
       <body class="maxWidth150 lineHeight16 marginTop0">
