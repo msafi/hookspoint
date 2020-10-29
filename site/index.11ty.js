@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.render = exports.data = void 0;
 const postList_1 = require("./_includes/postList");
 exports.data = {
-  layout: "layouts/home.11tyz.js",
+  layout: "layouts/home.11ty.js",
 };
 exports.render = async function (data) {
   return await postList_1.postList(data.collections.pages, this.img);

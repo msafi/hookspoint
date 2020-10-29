@@ -3,9 +3,10 @@ import * as Image from "@11ty/eleventy-img";
 import * as markdownIt from "markdown-it";
 import * as markdownItAnchor from "markdown-it-anchor";
 
-export default function (eleventyConfig: any) {
+module.exports = function (eleventyConfig: any) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setUseGitIgnore(false);
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -63,17 +64,14 @@ export default function (eleventyConfig: any) {
   });
 
   return {
-    markdownTemplateEngine: "liquid",
-    htmlTemplateEngine: "11ty.js",
-    dataTemplateEngine: "11ty.js",
+    templateFormats: ["md", "11ty.js"],
 
     // These are all optional, defaults are shown:
     dir: {
-      templateFormats: ["md", "png", "11ty.js"],
       input: "site",
       includes: "_includes",
       data: "_data",
       output: "docs",
     },
   };
-}
+};

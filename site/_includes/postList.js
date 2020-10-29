@@ -5,8 +5,6 @@ const bluebird = require("bluebird");
 const formatDate_1 = require("../code/formatDate");
 const html_1 = require("../code/html");
 
-dalsjf;
-
 exports.postList = async function (postList, img) {
   const formattedPosts = await bluebird.map(
     postList.slice().reverse(),
