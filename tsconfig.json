@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    // "esModuleInterop": true,
     "moduleResolution": "Node",
 
     "strict": true,
@@ -12,7 +12,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
 
-    "module": "esnext",
+    "module": "CommonJS",
     "target": "ES2017",
     "sourceMap": true,
 
@@ -30,8 +30,6 @@
     "stripInternal": true,
     "resolveJsonModule": true
   },
-
-  "outDir": "site",
 
   "include": ["src/**/*"]
 }

@@ -6,6 +6,7 @@
     "build": "run-s _clean _eleventy",
     "debug": "DEBUG=* eleventy",
     "start": "run-s _clean _serve",
+    "tsc": "tsc --outDir site",
     "_eleventy": "eleventy",
     "_serve": "eleventy --serve",
     "_clean": "rimraf docs"
@@ -20,6 +21,7 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@types/bluebird": "^3.5.33",
     "bluebird": "^3.7.2",
     "csvtojson": "^2.0.10",
     "luxon": "^1.21.3",

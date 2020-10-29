@@ -1,5 +1,5 @@
-const html = require("../../code/html");
-const formatDate = require("../../code/formatDate");
+const { html } = require("../../code/html");
+const { formatDate } = require("../../code/formatDate");
 
 exports.data = function () {
   return {

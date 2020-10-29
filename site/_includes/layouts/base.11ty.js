@@ -1,4 +1,4 @@
-const html = require("../../code/html");
+const { html } = require("../../code/html");
 
 exports.render = (data) => {
   const { title, description, metadata, content } = data;
