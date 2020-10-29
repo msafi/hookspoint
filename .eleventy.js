@@ -11,6 +11,7 @@ const path = require("path");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setUseGitIgnore(false);
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -67,10 +68,8 @@ module.exports = function (eleventyConfig) {
     return `<img src="${props.url}" width="${props.width}" height="${props.height}" alt="${alt}">`;
   });
 
-  eleventyConfig.setTemplateFormats(["md", "11ty.js"]);
-
   return {
-    // templateFormats: ["md", "11ty.js"],
+    templateFormats: ["md", "11ty.js"],
 
     dir: {
       input: "site",
