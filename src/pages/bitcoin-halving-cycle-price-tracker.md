@@ -7,4 +7,4 @@ tags:
 layout: layouts/Post.11ty.js
 ---
 
-{% bitcoinHalvingCyclePriceTracker %}
+ok

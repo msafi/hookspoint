@@ -1,8 +1,9 @@
 ---
 title: The Appearance of Satoshi Nakamoto
 date: 2020-10-19
-tags: bitcoin-history
-layout: layouts/Post.11ty.js
+tags:
+  - bitcoin-history
+layout: layouts/post.11ty.js
 ---
 
 Satoshi got the idea for a decentralized form of electronic

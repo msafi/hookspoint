@@ -3,7 +3,7 @@ const formatDate = require("../../code/formatDate");
 
 exports.data = function () {
   return {
-    layout: "layouts/Base.11ty.js",
+    layout: "layouts/base.11ty.js",
     templateClass: "tmpl-post",
   };
 };

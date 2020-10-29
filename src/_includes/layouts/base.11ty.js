@@ -1,6 +1,6 @@
 const html = require("../../code/html");
 
-exports.render = function (data) {
+exports.render = (data) => {
   const { title, description, metadata, content } = data;
 
   return html`
