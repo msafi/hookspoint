@@ -1,10 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.render = void 0;
-const html_1 = require("../../code/html");
-exports.render = (data) => {
-    const { title, description, metadata, content } = data;
-    return html_1.html `
+import { html } from "../../code/html";
+
+export const render = (data: any) => {
+  const { title, description, metadata, content } = data;
+
+  return html`
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -52,4 +51,3 @@ exports.render = (data) => {
     </html>
   `;
 };
-//# sourceMappingURL=base.11ty.js.map
