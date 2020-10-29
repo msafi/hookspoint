@@ -3,14 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.render = exports.data = void 0;
 const html_1 = require("../../code/html");
 const formatDate_1 = require("../../code/formatDate");
+
 exports.data = function () {
-    return {
-        layout: "layouts/base.11ty.js",
-        templateClass: "tmpl-post",
-    };
+  return {
+    layout: "layouts/base.11ty.js",
+    templateClass: "tmpl-post",
+  };
 };
 exports.render = function (data) {
-    return html_1.html `
+  return html_1.html`
     <p
       class="colorTextMuted marginHorizontal0 marginBottom0 marginTop7 fontSize09"
     >

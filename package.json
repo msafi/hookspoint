@@ -6,7 +6,8 @@
     "build": "run-s _clean _eleventy",
     "debug": "DEBUG=* eleventy",
     "start": "run-s _clean _serve",
-    "tsc": "tsc --outDir site",
+    "tscWatch": "tsc --outDir site",
+    "tsc11tyConfigWatch": "tsc .eleventy.ts --outDir .",
     "_eleventy": "eleventy",
     "_serve": "eleventy --serve",
     "_clean": "rimraf docs"
@@ -22,6 +23,9 @@
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@types/bluebird": "^3.5.33",
+    "@types/markdown-it": "^10.0.2",
+    "@types/markdown-it-anchor": "^4.0.4",
+    "@types/node": "^14.14.6",
     "bluebird": "^3.7.2",
     "csvtojson": "^2.0.10",
     "luxon": "^1.21.3",
@@ -29,6 +33,7 @@
     "markdown-it-anchor": "^5.2.5",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.5"
   }
 }

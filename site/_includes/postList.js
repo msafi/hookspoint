@@ -4,9 +4,14 @@ exports.postList = void 0;
 const bluebird = require("bluebird");
 const formatDate_1 = require("../code/formatDate");
 const html_1 = require("../code/html");
+
+dalsjf;
+
 exports.postList = async function (postList, img) {
-    const formattedPosts = await bluebird.map(postList.slice().reverse(), async (post) => {
-        return html_1.html `
+  const formattedPosts = await bluebird.map(
+    postList.slice().reverse(),
+    async (post) => {
+      return html_1.html`
         <li>
           <a
             href="${post.url}"
@@ -23,8 +28,9 @@ exports.postList = async function (postList, img) {
           </a>
         </li>
       `;
-    });
-    return html_1.html `
+    }
+  );
+  return html_1.html`
     <ul class="listStyleTypeNone padding0">
       ${formattedPosts.join("")}
     </ul>

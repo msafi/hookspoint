@@ -1,14 +1,9 @@
-const { DateTime } = require("luxon");
-const fs = require("fs");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const Image = require("@11ty/eleventy-img");
-const path = require("path");
+import * as fs from "fs";
+import * as Image from "@11ty/eleventy-img";
+import * as markdownIt from "markdown-it";
+import * as markdownItAnchor from "markdown-it-anchor";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig: any) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.setDataDeepMerge(true);
 
@@ -27,10 +22,10 @@ module.exports = function (eleventyConfig) {
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function (err, browserSync) {
+      ready: function (err: any, browserSync: any) {
         const content_404 = fs.readFileSync("docs/404.html");
 
-        browserSync.addMiddleware("*", (req, res) => {
+        browserSync.addMiddleware("*", (req: any, res: any) => {
           // Provides the 404 content without redirect.
           res.write(content_404);
           res.end();
@@ -43,8 +38,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("ref", function () {});
   eleventyConfig.addShortcode("img", async function (
-    src,
-    alt,
+    src: any,
+    alt: any,
     size = "full",
     outputFormat = "jpeg"
   ) {
@@ -67,16 +62,18 @@ module.exports = function (eleventyConfig) {
     return `<img src="${props.url}" width="${props.width}" height="${props.height}" alt="${alt}">`;
   });
 
-  eleventyConfig.setTemplateFormats(["md", "11ty.js"]);
-
   return {
-    // templateFormats: ["md", "11ty.js"],
+    markdownTemplateEngine: "liquid",
+    htmlTemplateEngine: "11ty.js",
+    dataTemplateEngine: "11ty.js",
 
+    // These are all optional, defaults are shown:
     dir: {
+      templateFormats: ["md", "png", "11ty.js"],
       input: "site",
       includes: "_includes",
       data: "_data",
       output: "docs",
     },
   };
-};
+}
