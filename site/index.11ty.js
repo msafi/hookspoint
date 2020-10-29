@@ -5,7 +5,5 @@ exports.data = {
 };
 
 exports.render = async function (data) {
-  // console.log("data.collections", data.collections);
-  console.log(Object.keys(data.collections));
   return await postList(data.collections.pages, this.img);
 };

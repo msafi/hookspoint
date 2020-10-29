@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
     // These are all optional, defaults are shown:
     dir: {
       templateFormats: ["md", "png", "11ty.js"],
-      input: "src",
+      input: "site",
       includes: "_includes",
       data: "_data",
       output: "docs",
