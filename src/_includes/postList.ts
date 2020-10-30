@@ -1,6 +1,6 @@
 import * as bluebird from "bluebird";
-import { formatDate } from "../code/formatDate";
-import { html } from "../code/html";
+import { formatDate } from "./code/formatDate";
+import { html } from "./code/html";
 
 export const postList = async function (postList: any, img: any) {
   const formattedPosts = await bluebird.map<any, any>(

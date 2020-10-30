@@ -1,4 +1,4 @@
-import { html } from "../../code/html";
+import { html } from "../code/html";
 
 export const render = (data: any) => {
   const { title, description, metadata, content } = data;

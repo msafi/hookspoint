@@ -5,12 +5,13 @@
   "scripts": {
     "build": "run-s _clean _eleventy",
     "debug": "DEBUG=* eleventy",
-    "start": "run-s _clean _serve",
-    "tscWatch": "tsc --outDir site",
-    "tsc11tyConfigWatch": "tsc .eleventy.ts --outDir .",
+    "start": "run-s _clean _tscEleventyConfig _tscSrc _serve",
+    "_clean": "rimraf docs content/_includes content/code",
     "_eleventy": "eleventy",
-    "_serve": "eleventy --serve",
-    "_clean": "rimraf docs"
+    "_eleventyServe": "eleventy --serve",
+    "_serve": "run-p _eleventyServe '_tscEleventyConfig -- -w' '_tscSrc -- -w'",
+    "_tscEleventyConfig": "tsc .eleventy.ts --outDir .",
+    "_tscSrc": "tsc --outDir content"
   },
   "repository": {
     "type": "git",
