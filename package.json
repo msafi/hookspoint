@@ -6,7 +6,7 @@
     "build": "run-s _clean _eleventy",
     "debug": "DEBUG=* eleventy",
     "start": "run-s _clean _tscEleventyConfig _tscSrc _serve",
-    "_clean": "rimraf docs content/_includes content/code",
+    "_clean": "rimraf docs content/_includes content/index.11ty.js content/index.11ty.js.map",
     "_eleventy": "eleventy",
     "_eleventyServe": "eleventy --serve",
     "_serve": "run-p _eleventyServe '_tscEleventyConfig -- -w' '_tscSrc -- -w'",
