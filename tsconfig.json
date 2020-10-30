@@ -29,7 +29,5 @@
     "removeComments": true,
     "stripInternal": true,
     "resolveJsonModule": true
-  },
-
-  "include": ["src/**/*", "src/declarations.d.ts.eleventy.tsy.ts"]
+  }
 }
