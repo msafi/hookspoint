@@ -3,7 +3,7 @@ title: Is Bitcoin's Mathematical Puzzle Useless?
 date: 2020-10-15
 tags: bitcoin-technical
 layout: layouts/Post.11ty.js
-img: /img/is-bitcoin-mathematical-puzzle-useless.png
+img: /content/img/is-bitcoin-mathematical-puzzle-useless.png
 ---
 
 {% img img "" %}

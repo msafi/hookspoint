@@ -1,7 +1,11 @@
+import { resolve } from "bluebird";
 import { html } from "../html";
+import { isDev } from "../isDev";
 
 export const render = (data: any) => {
-  const { title, description, metadata, content } = data;
+  const { title, description, metadata, content, dependencies } = data;
+
+  console.log("data", dependencies);
 
   return html`
     <!DOCTYPE html>
@@ -47,6 +51,29 @@ export const render = (data: any) => {
         </header>
 
         <main>${content}</main>
+
+        <script>
+          var exports = {};
+        </script>
+
+        ${dependencies !== undefined
+          ? dependencies
+              .map((dependency: string | { dev: string; prod: string }) => {
+                let resolvedDependency = "";
+
+                if (typeof dependency !== "string") {
+                  resolvedDependency = isDev ? dependency.dev : dependency.prod;
+                } else {
+                  resolvedDependency = dependency;
+                }
+
+                return html`<script
+                  crossorigin
+                  src="${resolvedDependency}"
+                ></script>`;
+              })
+              .join("\n")
+          : ""}
       </body>
     </html>
   `;

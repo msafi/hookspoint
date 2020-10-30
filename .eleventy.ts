@@ -5,6 +5,7 @@ import * as markdownItAnchor from "markdown-it-anchor";
 
 module.exports = function (eleventyConfig: any) {
   eleventyConfig.addPassthroughCopy("content/css");
+  eleventyConfig.addPassthroughCopy("content/js");
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setUseGitIgnore(false);
 
