@@ -1,5 +1,5 @@
-import { html } from "../code/html";
-import { formatDate } from "../code/formatDate";
+import { html } from "../html";
+import { formatDate } from "../formatDate";
 
 export const data = function () {
   return {
