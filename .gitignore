@@ -2,3 +2,4 @@ node_modules/
 content/**/*.js
 docs
 **/*.js.map
+.eleventy.js
