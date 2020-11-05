@@ -1,7 +1,7 @@
 import * as fs from "fs";
-import * as Image from "@11ty/eleventy-img";
-import * as markdownIt from "markdown-it";
-import * as markdownItAnchor from "markdown-it-anchor";
+import Image from "@11ty/eleventy-img";
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
 
 module.exports = function (eleventyConfig: any) {
   eleventyConfig.addPassthroughCopy("content/css");

@@ -1,5 +1,5 @@
 :root {
-  --containerWidth: 700px;
+  --containerWidth: 600px;
   --containerAlignment: 0 auto;
   --pixelUnit: 4px;
 }
@@ -9,6 +9,10 @@ ELEMENT STYLES
 **/
 html {
   font-family: sans-serif;
+}
+
+body {
+  max-width: var(--containerWidth);
 }
 
 p + p {
@@ -27,6 +31,15 @@ h6 {
 main h1 {
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+/**
+COMPONENTS
+**/
+.fullWidth {
+  width: calc(100vw - 20px);
+  position: relative;
+  left: calc(-1 * (((100vw - 20px) - 100%) / 2));
 }
 
 /**

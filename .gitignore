@@ -3,3 +3,4 @@ content/**/*.js
 docs
 **/*.js.map
 .eleventy.js
+**/*.hot-update.json

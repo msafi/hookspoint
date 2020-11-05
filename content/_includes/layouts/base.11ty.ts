@@ -5,8 +5,6 @@ import { isDev } from "../isDev";
 export const render = (data: any) => {
   const { title, description, metadata, content, dependencies } = data;
 
-  console.log("data", dependencies);
-
   return html`
     <!DOCTYPE html>
     <html lang="en">
@@ -70,6 +68,7 @@ export const render = (data: any) => {
                 return html`<script
                   crossorigin
                   src="${resolvedDependency}"
+                  charset="utf-8"
                 ></script>`;
               })
               .join("\n")

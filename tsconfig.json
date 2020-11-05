@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    // "esModuleInterop": true,
+    "esModuleInterop": true,
     "moduleResolution": "Node",
 
     "strict": true,
     "noImplicitReturns": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noEmitOnError": true,
@@ -17,7 +18,7 @@
     "sourceMap": true,
 
     "allowJs": true,
-    // "checkJs": true,
+    "checkJs": true,
 
     "jsx": "react",
 
@@ -25,11 +26,11 @@
     "baseUrl": ".",
     "declaration": false,
     "importHelpers": false,
-    "noEmitHelpers": true,
     "removeComments": true,
     "stripInternal": true,
     "resolveJsonModule": true
   },
 
-  "include": ["content/**/*", ".eleventy.ts", "declarations.d.ts"]
+  "include": ["content", ".eleventy.ts", "declarations.d.ts"],
+  "exclude": ["content/js", "node_modules"]
 }

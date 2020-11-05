@@ -1,4 +1,4 @@
-import * as bluebird from "bluebird";
+import bluebird from "bluebird";
 import { formatDate } from "./formatDate";
 import { html } from "./html";
 
