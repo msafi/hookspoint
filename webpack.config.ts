@@ -18,7 +18,7 @@ export const config: Configuration = {
     extensions: [".tsx", ".ts", ".js", ".json"],
   },
 
-  devtool: false,
+  devtool: "inline-source-map",
 
   performance: {
     hints: false,

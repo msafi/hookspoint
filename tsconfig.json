@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
 

@@ -8,12 +8,12 @@
     "debug": "DEBUG=* eleventy",
     "start": "run-s _clean _tsc _serve",
     "watch-mini": "run-s _webpack-server",
-    "_clean": "rimraf docs",
+    "_clean": "rimraf docs '**/*.hot-update.js{on}'",
     "_eleventy": "eleventy",
     "_eleventyServe": "eleventy --serve",
     "_serve": "run-p _eleventyServe '_tsc -- -w'",
     "_tsc": "tsc",
-    "_webpack-server": "TS_NODE_PROJECT='tsconfig.json' webpack serve --config webpack.dev.config.ts"
+    "_webpack-server": "TS_NODE_PROJECT='tsconfig.json' webpack serve --config webpack.dev.config.ts --host 0.0.0.0"
   },
   "repository": {
     "type": "git",

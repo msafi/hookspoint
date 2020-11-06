@@ -11,6 +11,8 @@
     // },
     "**/*.js.map": {
       "when": "$(basename)"
-    }
+    },
+    "**/*.hot-update.js": true,
+    "**/*.hot-update.json": true
   }
 }
