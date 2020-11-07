@@ -96,14 +96,14 @@ const StpmChart = () => {
         `<br>- Price: ${formatCurrency.format(record.price)}`,
       ];
 
-      if (
-        i >
-        (full ? twentyCyclePriceMovement : twentyFourMonthSlice).length - 1
-      ) {
+      const selectedMovement = full
+        ? twentyCyclePriceMovement
+        : twentyFourMonthSlice;
+      if (i > selectedMovement.length - 1) {
         text.push(
           "<br><br>2020 cycle projection:",
           `<br>- Date: ${dayjs(today)
-            .add(i - twentyFourMonthSlice.length, "day")
+            .add(i - selectedMovement.length, "day")
             .format("MMM DD YYYY")}`,
           `<br>- Price: ${formatCurrency.format(
             twentyCyclePriceMovement[0].price * (1 + record.accumulatedChange)
