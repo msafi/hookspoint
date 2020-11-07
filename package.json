@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Blog",
   "scripts": {
-    "build": "run-s _clean _eleventy",
+    "build": "run-s _clean _tsc _eleventy",
     "build-mini": "TS_NODE_PROJECT='tsconfig.json' webpack --config webpack.config.ts",
     "debug": "DEBUG=* eleventy",
     "start": "run-s _clean _tsc _serve",

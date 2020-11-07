@@ -2,3 +2,4 @@ README.md
 content/_drafts
 content/js
 **/*.js.map
+**/*.hot-update.js
