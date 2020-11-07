@@ -27,3 +27,6 @@ mode on mobile.
     <div class="loader">Loading...</div>
   </div>
 </div>
+
+**Discuss
+[on twitter](https://twitter.com/msafi/status/1325167239989850117)**
