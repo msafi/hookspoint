@@ -1,13 +1,7 @@
 {
-  "name": "bitcoincyclepricetracker",
+  "name": "sixteen-twenty-price-movement",
   "version": "1.0.0",
-  "description": "",
-  "main": "bitcoinCyclePriceTracker.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "main": "sixteenTwentyPriceMovement.js",
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.0",
     "@types/plotly.js": "^1.54.2",
@@ -17,7 +11,6 @@
     "date-format": "^3.0.0",
     "dayjs": "^1.9.5",
     "plotly.js": "^1.57.1",
-    "plotly.js-dist": "^1.57.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0",

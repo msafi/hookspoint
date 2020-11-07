@@ -1,5 +1,4 @@
-import { reducePercentageChanges } from "./reducePercentageChanges";
-import { PriceMovement, Prices } from "./types";
+import { Prices } from "./types";
 
 export const getCycleMovement = (
   prices: Prices,

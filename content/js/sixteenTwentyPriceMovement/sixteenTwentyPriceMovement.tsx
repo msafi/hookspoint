@@ -2,7 +2,6 @@ import dayjs from "dayjs";
 import React, { useEffect, useState } from "react";
 import ReactDom from "react-dom";
 import { hot } from "react-hot-loader/root";
-import Plot from "react-plotly.js";
 import { PriceMovement, PriceMovementRecord, Prices } from "./types";
 import {
   formatCurrency,
@@ -11,6 +10,11 @@ import {
   plotDataProps,
   plotProps,
 } from "./utils";
+import createPlotlyComponent from "react-plotly.js/factory";
+// @ts-ignore
+import Plotly from "plotly.js/lib/index-geo";
+
+const Plot = createPlotlyComponent(Plotly);
 
 const dateFormat = "YYYY-MM-DD";
 const today = dayjs().format(dateFormat);

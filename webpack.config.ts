@@ -1,8 +1,10 @@
 import { Configuration, DefinePlugin, IgnorePlugin } from "webpack";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { join } from "path";
 
 const { PROJECT } = process.env;
 const targetDirname = `content/js/${PROJECT}`;
+const isProd = process.env.NODE_ENV === "production";
 
 export const config: Configuration = {
   entry: join(__dirname, targetDirname, `${PROJECT}.tsx`),
@@ -12,13 +14,13 @@ export const config: Configuration = {
     path: join(__dirname, targetDirname),
   },
 
-  mode: "development",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
 
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"],
   },
 
-  devtool: "inline-source-map",
+  devtool: isProd ? undefined : "inline-source-map",
 
   performance: {
     hints: false,
@@ -45,6 +47,8 @@ export const config: Configuration = {
   },
 
   plugins: [
+    // new BundleAnalyzerPlugin(),
+
     new DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(
         process.env.NODE_ENV || "development"
