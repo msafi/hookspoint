@@ -29,4 +29,5 @@ mode on mobile.
 </div>
 
 **Discuss
-[on twitter](https://twitter.com/msafi/status/1325167239989850117)**
+<a href="https://twitter.com/msafi/status/1325167239989850117" rel="noreferer noopener">on
+twitter</a>**
