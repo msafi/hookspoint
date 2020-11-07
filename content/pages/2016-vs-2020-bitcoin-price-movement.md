@@ -1,5 +1,5 @@
 ---
-title: 2016 vs 2020 Bitcoin Price Movement
+title: 2020 halving price compared to 2016
 date: 2020-11-06
 tags: bitcoin-finance
 layout: layouts/post.11ty.js

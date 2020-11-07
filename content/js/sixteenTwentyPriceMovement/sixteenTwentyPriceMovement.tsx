@@ -250,6 +250,6 @@ const StpmChart = () => {
 const HotStpmChart = hot(StpmChart);
 
 ReactDom.render(
-  <HotStpmChart />,
+  process.env.NODE_ENV === "production" ? <StpmChart /> : <HotStpmChart />,
   document.getElementById("sixteenTwentyPriceMovement")
 );
