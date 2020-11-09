@@ -133,8 +133,8 @@ const StpmChart = () => {
       <h2>First, a close up look</h2>
 
       <p>
-        We are on day number {twentyCyclePriceMovement.length} of this halving
-        cycle. The price today is{" "}
+        Yesterday was day number {twentyCyclePriceMovement.length} of this
+        halving cycle. The price was{" "}
         {formatCurrency.format(lastMovementOfTwentyCycle.price)}. That's a{" "}
         {formatPercent(lastMovementOfTwentyCycle.accumulatedChange)} change from
         the starting price of the cycle, which was{" "}
